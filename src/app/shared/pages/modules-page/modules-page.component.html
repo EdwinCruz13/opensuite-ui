@@ -1,0 +1,28 @@
+@if(modulos?.subModulo?.length)
+{
+<div class="mb-4 p-2 flex flex-row flex-wrap gap-4">
+  <div *ngFor="let item of modulos?.subModulo">
+    <p-card [style]="{ width: '16rem', overflow: 'hidden' }">
+      <ng-template #header>
+        <div class="flex items-center justify-center h-20 bg-gray-900">
+          <i class="{{ item.icon }} text-white text-2xl"></i>
+        </div>
+      </ng-template>
+      <ng-template #title class="text-sm">{{ item?.nSubModulo }}</ng-template>
+      <p class="text-xs">{{ item?.descripcion }}</p>
+      <ng-template #footer>
+            <div class="flex gap-4 mt-1">
+                <p-button label="Información" severity="secondary" class="w-full" [outlined]="true" styleClass="w-full" />
+                <p-button label="Ir" class="w-full" styleClass="w-full" />
+            </div>
+        </ng-template>
+    </p-card>
+  </div>
+</div>
+
+
+
+
+}
+
+

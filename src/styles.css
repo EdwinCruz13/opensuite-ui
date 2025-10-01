@@ -1,0 +1,107 @@
+@import 'tailwindcss'; /* You can add global styles to this file, and also import other style files */
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+body {
+  font-family: 'Trebuchet MS', sans-serif, Arial, Helvetica, sans-serif;
+}
+
+/* Variables por defecto (light) */
+:root {
+  --bg-sidebar: #f3f4f6;
+  --bg-topbar: #f3f4f6;
+  --bg-footer: #f3f4f6;
+  --bg-content: #ffffff;
+  --bg-dropdown: #ffffff;
+  --bg-form: #f3f4f6;
+
+  --text-color: #1f2937;
+  --border-color: #d1d5db; /* gris claro para light */
+  --border-dropdown: #d1d5db;
+  --shadow-form: 0 0px 6px rgba(0, 0, 0, 0.6);
+
+  --hover-text-color: #fff;
+  --hover-background: #4845c9; /*background para hover de los items del aside*/
+}
+
+.dark {
+  --bg-sidebar: #1e1e1e;
+  --bg-topbar: #1e1e1e;
+  --bg-footer: #1e1e1e;
+  --bg-content: #111111; /* contenido negro más oscuro */
+  --bg-dropdown: #222222;
+  --bg-form: #1e1e1e;
+  --text-color: #f3f4f6;
+  --border-color: #333333; /* gris oscuro para dark */
+  --border-dropdown: #333333;
+  --shadow-form: 0 0px 6px rgba(255, 255, 255, 0.2);
+
+
+  --hover-text-color: #fff;
+  --hover-background: #575757; /*background para hover de los items del aside*/
+}
+
+.sidebar {
+  background-color: var(--bg-sidebar);
+  color: var(--text-color);
+  border-right: 1px solid var(--border-color);
+}
+
+.topbar {
+  background-color: var(--bg-topbar);
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.footer {
+  background-color: var(--bg-footer);
+  color: var(--text-color);
+  border-top: 1px solid var(--border-color);
+}
+
+.content {
+  background-color: var(--bg-content);
+  color: var(--text-color);
+}
+
+.form {
+  background-color: var(--bg-form);
+  color: var(--text-color);
+  box-shadow: var(--shadow-form);
+}
+
+.dropdown {
+  background-color: var(--bg-dropdown);
+  color: var(--text-color);
+  border: 1px solid var(--border-dropdown);
+}
+
+.scrollbar-glass {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #a0a0a0 #e5e7eb; /* thumb y track (Firefox) */
+}
+
+/* Chrome, Edge, Safari */
+.scrollbar-glass::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-glass::-webkit-scrollbar-track {
+  background: #f3f4f6; /* track gris claro */
+  border-radius: 4px;
+}
+
+.scrollbar-glass::-webkit-scrollbar-thumb {
+  background-color: #a0a0a0; /* thumb gris */
+  border-radius: 4px;
+  border: 2px solid #f3f4f6; /* espacio alrededor del thumb */
+}
+
+.scrollbar-glass::-webkit-scrollbar-thumb:hover {
+  background-color: #737373; /* gris más oscuro al pasar el mouse */
+}
+
+.item-hover:hover {
+  transition: background-color 0.1s ease-out;
+  color:var(--hover-text-color);
+  background-color: var(--hover-background);
+}

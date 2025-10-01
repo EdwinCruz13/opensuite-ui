@@ -1,0 +1,13 @@
+<nav class="w-full ">
+  <ul class="space-y-3">
+    @for (item of menu; track item.moduloID) { 
+      @if(item.moduloID !== 1 && item.moduloID !== 2)
+      {
+        <li class=" mb-2">
+          <app-sidebar-item [item]="item" [isCollapsed] = "isCollapsed" />
+        </li>
+      } 
+    }
+  </ul>
+</nav>
+

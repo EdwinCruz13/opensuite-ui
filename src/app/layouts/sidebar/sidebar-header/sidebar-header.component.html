@@ -1,0 +1,26 @@
+<div class="flex items-center justify-between h-18 px-4 shrink-0">
+  <!-- Logo + Nombre -->
+  <div class="flex items-center space-x-0">
+    <img
+      src="https://refactoring.guru/images/content-public/logos/logo-new.png?id=97d554614702483f31e38b32e82d8e34"
+      class="w-12 h-12 object-contain"
+      style="margin-top: 10px"
+    />
+
+    @if (!collapseService.isCollapsed()) {
+    <span class="font-bold" style="font-size: 22px">OpenSuite</span>
+    }
+  </div>
+
+  <!-- Botón toggle -->
+  <button (click)="collapseService.toggleSidebar()" class="p-2 rounded" style="margin-top: -10px">
+    @if (!collapseService.isCollapsed()) {
+        <i class="fa-solid fa-angles-left"></i>
+
+    
+    } @else {
+      <i class="fa-solid fa-bars" style="margin-left: -3px;" ></i>
+
+    }
+  </button>
+</div>

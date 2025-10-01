@@ -1,0 +1,21 @@
+<aside
+  class="flex flex-col w-64 h-screen transition-all duration-300"
+  [ngClass]="{
+    'w-64': !collapseService.isCollapsed(),
+    'w-15': collapseService.isCollapsed()
+  }"
+>
+  <app-sidebar-header></app-sidebar-header>
+
+   <div class="flex-1 items-center mt-3.5 overflow-y-auto scrollbar-glass">
+    <app-sidebar-menu
+      [isCollapsed]="collapseService.isCollapsed()"
+      [menu]="menu"
+    ></app-sidebar-menu>
+   </div>
+
+
+   <app-sidebar-footer [isCollapsed]="collapseService.isCollapsed()"></app-sidebar-footer>
+
+</aside>
+<!-- dark:bg-black dark:text-green-50 -->

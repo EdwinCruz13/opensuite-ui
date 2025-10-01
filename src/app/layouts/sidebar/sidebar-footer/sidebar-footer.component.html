@@ -1,0 +1,23 @@
+<div
+  class="h-16 flex items-center   shrink-0 px-2"
+  [ngClass]="{
+    'flex-col -translate-y-5': isCollapsed,
+    'flex-row justify-between': !isCollapsed
+  }"
+>
+  <!-- Configuración -->
+  <button
+    class="flex flex-col items-center justify-center w-10 h-12 rounded p-3 cursor-pointer item-hover"
+  >
+    <i class="fa-solid fa-cog text-lg"></i>
+    @if(!isCollapsed){ <span class="text-sm mt-1">Config</span>}
+  </button>
+
+  <!-- Salir -->
+  <button
+    class="flex flex-col items-center justify-center w-10 h-12 rounded p-3 cursor-pointer item-hover"
+  >
+    <i class="fa-solid fa-right-from-bracket text-lg"></i>
+    @if(!isCollapsed){ <span class="text-sm mt-1">Salir</span>}
+  </button>
+</div>

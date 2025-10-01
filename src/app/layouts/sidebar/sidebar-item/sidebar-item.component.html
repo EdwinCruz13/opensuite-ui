@@ -1,0 +1,49 @@
+@if(isCollapsed){
+<a
+  routerLink="modulos/{{item?.route}}"
+  class="flex items-center justify-center p-4 item-hover"
+>
+  <i class="{{ item?.icon }}"></i>
+</a>
+
+}
+
+@else {
+
+<button
+  class="flex items-center w-full px-4 py-2 item-hover focus:outline-none cursor-pointer "
+  style="font-size: 14px"
+  title="{{item?.nModulo}}"
+  aria-label="{{item?.nModulo}}"
+  (click)="toggleItem(item)"
+
+  >
+  <span class="mr-2"><i class="{{ item?.icon }}"></i></span>
+
+  @if (!isCollapsed)
+  {
+    <span>{{ item?.nModulo }}</span>
+    <i class="ml-auto transition-transform fa-solid fa-angle-right"[ngClass]="{ 'rotate-90': item?.expanded }"></i>
+  }
+</button>
+
+
+<!-- Submenús -->
+@if (item?.expanded && item?.subModulo?.length) {
+<ul>
+  @for (submodulo of item?.subModulo; track submodulo.subModuloID) {
+  <li class="w-full text-xs item-hover">
+    <a
+      routerLink="{{submodulo?.route}}"
+      class="flex items-center w-full px-4 py-2 pl-10 "
+      style="font-size: 12px"
+    >
+      <span class="mr-2"><i class="{{ submodulo.icon }}"></i></span>
+      <span>{{ submodulo.nSubModulo }}</span>
+    </a>
+  </li>
+  }
+</ul>
+}
+
+}
