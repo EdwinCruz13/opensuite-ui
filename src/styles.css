@@ -11,8 +11,8 @@ body {
   --bg-topbar: #f3f4f6;
   --bg-footer: #f3f4f6;
   --bg-content: #ffffff;
-  --bg-dropdown: #ffffff;
-  --bg-form: #f3f4f6;
+  --bg-dropdown: #fdfcfc;
+  --bg-form: #f6f6f6;
 
   --text-color: #1f2937;
   --border-color: #d1d5db; /* gris claro para light */

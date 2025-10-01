@@ -3,7 +3,7 @@ import { LoginPageComponent } from './features/seguridad/auth/pages/login-page/l
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'dashboard',
     loadComponent: () =>
       import('./layouts/layout.component').then(m => m.LayoutComponent),
     children: [
@@ -22,9 +22,14 @@ export const routes: Routes = [
     ],
   },
   {
+    path: "",
+    component: LoginPageComponent
+  },
+  {
     path: "login",
     component: LoginPageComponent
   },
+
   {
     path: '**',
     loadComponent: () =>
