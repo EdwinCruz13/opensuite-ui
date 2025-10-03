@@ -2,7 +2,7 @@ import { NgClass } from '@angular/common';
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 import { ThemeService } from '../../core/services/theme.service';
-import { DarkToggleComponent } from '../../core/components/dark-toggle/dark-toggle.component';
+import { DarkToggleComponent } from '../../shared/components/dark-toggle/dark-toggle.component';
 
 @Component({
   selector: 'app-topbar',

@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { firstValueFrom, map, Observable, tap } from 'rxjs';
 import { environment } from '../../../environments/enviroment';
 
-import { ApiResponse } from '../models/apiresponse.interface'
+import { ApiResponse } from '../../models/apiresponse.interface'
 import { Modulo } from '../../models/seguridad/modulos/modulo.interface';
 
 

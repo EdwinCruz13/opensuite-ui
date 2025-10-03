@@ -4,6 +4,7 @@ export interface Acciones {
   moduloID: number;
   nAccion: string;
   codigo: string;
+  permiso: string;
   icon: string;
   descripcion: string;
   route: string;

@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { DarkLogo, LightLogo } from '../../../../../core/utils/logo';
 import { ThemeService } from './../../../../../core/services/theme.service';
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../../../../../core/services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({

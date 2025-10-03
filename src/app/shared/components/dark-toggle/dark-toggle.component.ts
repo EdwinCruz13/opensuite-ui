@@ -1,15 +1,23 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { ThemeService } from '../../services/theme.service';
 import { NgClass } from '@angular/common';
+import { Component, ElementRef, HostListener, ViewChild, inject } from '@angular/core';
+
+
+import { ThemeService } from '../../../core/services/theme.service';
+
+
+
+
+
+
 
 @Component({
   selector: 'app-dark-toggle',
   imports: [NgClass],
   templateUrl: './dark-toggle.component.html',
+  standalone: true,
 })
 export class DarkToggleComponent {
-//controla el modo oscuro
-  constructor(public themeService: ThemeService) {}
+  themeService = inject(ThemeService)
 
   //cambia el modo oscurp
   toggleDarkMode() {
