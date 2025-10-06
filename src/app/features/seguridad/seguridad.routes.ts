@@ -1,9 +1,22 @@
 import { Routes } from '@angular/router';
-import { USUARIOS_ROUTES } from './usuarios/routes/usuarios.routes';
 
 
 export const SEGURIDAD_ROUTES: Routes = [
   {
-    path: 'usuarios',
-    children: USUARIOS_ROUTES,
-  }];
+    path: '',
+    children: [
+      {
+        path: 'usuarios',
+        loadChildren: () =>
+          import('./usuarios/routes/usuarios.routes').then(m => m.USUARIOS_ROUTES)
+      },
+
+      {
+        path: 'modulos',
+        loadChildren: () =>
+          import('./modulos/routes/modulos.routes').then(m => m.MODULOS_ROUTES)
+      },
+
+    ]
+  }
+];

@@ -1,6 +1,6 @@
 @if(isCollapsed){
 <a
-  routerLink="modulos/{{item?.routerLink}}"
+  routerLink="seguridad/modulos/{{item?.routerLink}}"
   class="flex items-center justify-center p-4 item-hover"
 >
   <i class="{{ item?.icon }}"></i>
@@ -34,7 +34,7 @@
   @for (submodulo of item?.subModulo; track submodulo.subModuloID) {
   <li class="w-full text-xs item-hover">
     <a
-      routerLink="{{submodulo?.routerLink}}"
+      routerLink="/seguridad/{{submodulo?.routerLink}}"
       class="flex items-center w-full px-4 py-2 pl-10 "
       style="font-size: 12px"
     >
