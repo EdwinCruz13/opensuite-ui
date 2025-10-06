@@ -11,13 +11,10 @@ export const routes: Routes = [{
     },
     {
       path: 'modulos',
-      loadChildren: () => import('./shared/modulos.routes').then(m => m.MODULOS_ROUTES),
+      loadChildren: () => import('./shared/routes/shared.routes').then(m => m.SHARED_ROUTES),
     }],
     canActivate: [AuthGuard] //para protegre rutas de aquellos que entran sin token validao
   },
-
-
-
 
   {
     path: "",

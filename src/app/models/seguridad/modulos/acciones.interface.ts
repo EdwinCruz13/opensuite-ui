@@ -7,5 +7,5 @@ export interface Acciones {
   permiso: string;
   icon: string;
   descripcion: string;
-  route: string;
+  routerLink: string;
 }

@@ -5,7 +5,7 @@ export interface Modulo {
   nModulo: string;
   codigo: string;
   icon: string;
-  route: string;
+  routerLink: string;
   descripcion: string;
   expanded?: boolean;
   subModulo?: SubModulo[];

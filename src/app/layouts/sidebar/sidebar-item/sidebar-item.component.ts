@@ -14,7 +14,7 @@ export class SidebarItemComponent {
   @Input() isCollapsed = false;
 
 
-  @Input() item: Modulo | null = { moduloID: 0, descripcion: "", nModulo: "", icon: "", codigo: "", route: "", subModulo: []};
+  @Input() item: Modulo | null = { moduloID: 0, descripcion: "", nModulo: "", icon: "", codigo: "", routerLink: "", subModulo: []};
 
   /**
    * obtiene el modulo expandido
